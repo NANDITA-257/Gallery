@@ -1,0 +1,64 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="Bootstrap/css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="signup.css">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<title>
+LOGIN FORM
+</title>
+</head>
+<body>
+<div class="signup_page">
+<div class="form_page">
+<form method="post" onsubmit="return check(this);">
+ <div class="form-group">
+  <label for="exampleInputUsername1">First Name</label>
+  <input type="text" class="form-control" id="exampleInputUsername1" name="uname"placeholder="Enter name">
+  </div>
+  <div class="form-group">
+  <label for="exampleInputUsername1">Last name</label>
+  <input type="text" class="form-control" id="exampleInputUsername2" name="uname"placeholder="Enter name">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Password</label>
+    <input type="password" class="form-control" name="pwd"id="exampleInputPassword1" placeholder="Password">
+  </div>
+ 
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="mail" placeholder="Enter email">
+    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPhone1">Phone number</label>
+    <input type="text" class="form-control" id="exampleInputPhone1" placeholder="Phone number">
+  </div>
+ 
+  <button class="btn btn-success ">signup</button>
+<button type="button" class="btn btn-danger">cancel</button><br><br>
+<p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+</form>
+</div>
+</div>
+<script>
+function check(form)
+  {
+    
+    function checkPassword(str)
+  {
+    var chk=(str.includes(form.uname.value));
+	
+	return(chk);
+  }
+    
+      if(checkPassword(form.pwd.value)==true) {
+        alert("do not enter the name in the password");
+        form.pwd.focus();
+        return false;
+      }
+    
+   
+  }
+</script>
+</body>
+</html>
